@@ -1,21 +1,21 @@
 import React, { Component } from "react";
-import FriendCard from "./components/Card";
+import Card from "./components/Card";
 import Wrapper from "./components/Wrapper";
 import Title from "./components/Title";
-import friends from "./cards.json";
+import chars from "./chars.json";
 import "./App.css";
 
 class App extends Component {
   // Setting this.state.friends to the friends json array
   state = {
-    cards
+    chars
   };
 
   shuffleCard = id => {
     // Filter this.state.friends for friends with an id not equal to the id being removed
-    const cards = this.state.cards.filter(card => card.id !== id);
+    const chars = this.state.chars.filter(char => char.id !== id);
     // Set this.state.friends equal to the new friends array
-    this.setState({ cards });
+    this.setState({ chars });
   };
 
   // Map over this.state.friends and render a FriendCard component for each friend object
