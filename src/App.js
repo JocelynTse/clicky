@@ -23,11 +23,11 @@ class App extends Component {
 
 
 
-  handleClicked = () => {
-    const click = this.state.clicked;
+  handleClicked = cardId => {
+    const click = cardId.state.clicked;
     if (click === false) {
       this.setState({ score: this.state.score + 1 });
-      this.setState({ clicked: true });
+      cardId.setState({ clicked: true });
     } else {
       this.setState({ score: 0 });
     };
